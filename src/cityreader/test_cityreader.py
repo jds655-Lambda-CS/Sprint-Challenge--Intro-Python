@@ -78,7 +78,8 @@ class CityreaderTests(unittest.TestCase):
     
   def test_cityreader_correctness(self):
     self.assertEqual(len(self.cities), 60)
-    for i in range(len(self.cities)):
+    for i in range(0, len(self.cities)):
+      # print(f'i= {i} Testing: {self.cities[i]}   Against: {self.expected[i]}')
       self.assertTrue(check_city(self.cities[i], self.expected[i]))
 
 
