@@ -30,13 +30,13 @@ print(a)
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [item for item in humans if item.name[-1].upper() == "E"]
+b = [item.name for item in humans if item.name[-1].upper() == "E"]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = [item for item in humans if item.name[0].upper() in ['C', 'D', 'E', 'F', 'G']]
+c = [item.name for item in humans if item.name[0].upper() in ['C', 'D', 'E', 'F', 'G']]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
@@ -67,5 +67,5 @@ print(g)
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
 import math
-h = [Human(item.name, math.sqrt(item.age)) for item in humans]
+h = [math.sqrt(item.age) for item in humans]
 print(h)
